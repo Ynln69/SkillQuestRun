@@ -1,0 +1,14 @@
+:root {
+  --font-family: "Marcellus", serif;
+  --second-family: "Ysabeau Infant", sans-serif;
+
+  --main-color: #343131;
+  --main-background: #f4f6f8;
+
+  --light-color: #fff;
+
+  --button-color: #a259ff;
+  --hover-color: #481887;
+
+  --time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
