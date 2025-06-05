@@ -4,15 +4,126 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkillQuestRun.com</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
     <header class="site-header"></header>
 
-    <main></main>
-    
+    <main>
+      <section class="hero-section">
+        <div class="slider">
+          <div
+            class="slide active"
+            style="background-image: url('assets/img/slide1.jpg')"
+          >
+            <div class="hero-content">
+              <h4>FIND YOUR PLACE</h4>
+              <h1>Relax, Recharge, and Enjoy Gaming Events</h1>
+              <a href="#" class="btn-primary-outline">Explore Now</a>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url('assets/img/slide2.jpg')"
+          >
+            <div class="hero-content">
+              <h4>FIND YOUR PLACE</h4>
+              <h1>Chill, Recharge, and Compete</h1>
+              <a href="#" class="btn-primary-outline">Learn More</a>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url('assets/img/slide3.jpg')"
+          >
+            <div class="hero-content">
+              <h4>FIND YOUR PLACE</h4>
+              <h1>Relax, Recharge, and Enjoy</h1>
+              <a href="#" class="btn-primary-outline">Book Your Stay</a>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button class="nav-btn prev">&#10094;</button>
+          <button class="nav-btn next">&#10095;</button>
+        </div>
+      </section>
+
+      <section class="hotels-section section">
+        <div class="container">
+          <h2 class="title">Hotels you might like</h2>
+          <div class="slider-container">
+            <ul class="hotels-slider" id="hotelsSlider"></ul>
+          </div>
+          <div class="slide-navigation">
+            <button class="slide-btn prev" id="prevBtn">&#10094;</button>
+            <button class="slide-btn next" id="nextBtn">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt dolore magna aliqua.
+            </p>
+            <span class="divider"></span>
+          </div>
+          <div class="contact-content">
+            <form class="contact-form" id="contactForm">
+              <div class="form-grid">
+                <input type="text" name="name" placeholder="Name" required />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+1 (414) 312-4433"
+                  required
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <textarea
+                name="message"
+                placeholder="Your message here"
+                required
+              ></textarea>
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+            <div class="contact-image">
+              <img src="assets/img/contact.png" alt="Contact Us" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer"></footer>
 
+    <!-- Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <p>Your message has been sent successfully!</p>
+        <button id="closeModal">OK</button>
+      </div>
+    </div>
+
     <script src="./scripts/builder.js"></script>
+    <script src="./scripts/slider-hero.js"></script>
+    <script src="./scripts/hotels-data.js"></script>
+    <script src="./scripts/hotels-slider.js"></script>
+    <script src="./scripts/contactForm.js"></script>
   </body>
 </html>

@@ -1,0 +1,121 @@
+.footer {
+  background-color: #111827;
+  color: #d1d5db;
+  padding: 60px 20px 20px;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+
+    .footer-brand {
+      flex: 1 1 300px;
+
+      h3 {
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #9ca3af;
+      }
+
+      address {
+        font-style: normal;
+        font-size: 14px;
+        color: #9ca3af;
+      }
+    }
+
+    .footer-nav {
+      flex: 1 1 200px;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 12px;
+
+          a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #8b5cf6; /* красивий фіолетовий */
+            }
+          }
+        }
+      }
+    }
+
+    .footer-links {
+      flex: 1 1 200px;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 12px;
+
+          a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #8b5cf6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    border-top: 1px solid #374151;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+
+    p {
+      font-size: 14px;
+      color: #6b7280;
+    }
+  }
+}
+
+/* 🔥 Адаптив */
+@media (max-width: 768px) {
+  .footer {
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-nav,
+    .footer-links {
+      margin-top: 20px;
+    }
+  }
+}

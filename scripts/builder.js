@@ -1,28 +1,40 @@
 const getRelativePath = (file) => {
-  const pathDepth = window.location.pathname.split("/").length - 2;
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
   let prefix = "";
-  for (let i = 0; i < pathDepth; i++) {
-    prefix += "../";
+
+  if (pathParts.includes("pages")) {
+    prefix = "../";
+  } else {
+    prefix = "./";
   }
+
   return prefix + file;
 };
 
 const loadHTML = (url, selector, callback) => {
   fetch(url)
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Could not fetch ${url}: ${response.statusText}`);
+      }
+      return response.text();
+    })
     .then((html) => {
       document.querySelector(selector).innerHTML = html;
       if (callback) callback();
+    })
+    .catch((error) => {
+      console.error(error);
     });
 };
 
 const setActiveLink = () => {
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll("nav a, .mobile-menu a");
 
   navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href").replace("./", "");
-    if (linkPath === currentPath) {
+    const href = link.getAttribute("href").replace("./", "").replace("../", "");
+    if (href === currentPage || (href === "index.html" && currentPage === "")) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
@@ -30,6 +42,20 @@ const setActiveLink = () => {
   });
 };
 
+const updateNavLinks = () => {
+  document.querySelectorAll("nav a, .mobile-menu a").forEach((link) => {
+    const originalHref = link.getAttribute("href");
+    if (
+      originalHref &&
+      !originalHref.startsWith("http") &&
+      !originalHref.startsWith("#")
+    ) {
+      link.setAttribute("href", getRelativePath(originalHref));
+    }
+  });
+};
+
+// Завантаження Header
 loadHTML(getRelativePath("header.html"), ".site-header", () => {
   const burger = document.getElementById("burger");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -61,8 +87,11 @@ loadHTML(getRelativePath("header.html"), ".site-header", () => {
     });
   }
 
+  updateNavLinks();
   setActiveLink();
-});
+}); // <-- Ось тут закриття
 
 // Завантаження Footer
-loadHTML(getRelativePath("footer.html"), ".footer");
+loadHTML(getRelativePath("footer.html"), ".footer", () => {
+  updateNavLinks();
+});

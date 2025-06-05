@@ -1,0 +1,103 @@
+@import url(./base/variables.css);
+@import url(./base/reset.css);
+@import url(./base/common.css);
+
+@import url(./components/header.css);
+@import url(./components/about-stats.css);
+@import url(./components/testimonials.css);
+@import url(./components/footer.css);
+
+.page-hero {
+  background-color: #f9fafa;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs a {
+  color: #333;
+  text-decoration: none;
+}
+
+.breadcrumbs span {
+  color: #999;
+}
+
+.icon-home::before {
+  content: "🏠"; 
+  margin-right: 4px;
+}
+
+.about-us-section {
+  padding: 80px 0;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 50%;
+}
+
+.about-text h5 {
+  color: #9b59b6;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.about-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.about-features li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+}
+
+.about-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #9b59b6;
+}
+
+.about-image {
+  flex: 1 1 40%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}

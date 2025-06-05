@@ -4,15 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkillQuestRun.com</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="../styles/hotels-page.css" />
   </head>
   <body>
     <header class="site-header"></header>
 
-    <main></main>
-    
+    <main class="hotel-detail container">
+      <section class="hotel-hero">
+        <img src="" alt="Hotel Image" class="hotel-image" />
+        <div class="hotel-basic-info">
+          <h1 class="hotel-name"></h1>
+          <div class="hotel-stars"></div>
+        </div>
+      </section>
+
+      <!-- ======= Description Section ======= -->
+      <section class="hotel-description-section">
+        <div class="hotel-description-content">
+          <article class="hotel-description">
+            <h2 class="hotel-heading"></h2>
+            <div class="hotel-description-text"></div>
+          </article>
+
+          <aside class="hotel-extras">
+            <h2>Hotel Extras</h2>
+            <ul class="extras-list">
+              <!-- Список екстр -->
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ======= Amenities Section ======= -->
+      <section class="hotel-amenities-section">
+        <h2>Hotel Services</h2>
+        <div class="checkin-checkout">
+          <span class="check-in"></span> - <span class="check-out"></span>
+        </div>
+        <ul class="amenities-list">
+          <!-- Список зручностей -->
+        </ul>
+      </section>
+    </main>
+
     <footer class="footer"></footer>
 
-    <script src="./scripts/builder.js"></script>
+    <script src="../scripts/builder.js"></script>
+    <script src="../scripts/hotels-data.js"></script>
+    <script src="../scripts/hotel-details.js"></script>
   </body>
 </html>

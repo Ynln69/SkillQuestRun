@@ -10,9 +10,12 @@
     width: 100%;
 
     .logo {
-      img {
-        height: 50px;
-      }
+      display: inline-block;
+      width: 117px;
+      height: 30px;
+      background-image: url(../../assets/img/logo.png);
+      background-size: contain;
+      background-repeat: no-repeat;
     }
 
     .nav-menu {
@@ -117,6 +120,7 @@
   }
   @media (min-width: 1024px) {
     display: flex;
+    justify-content: center;
   }
   &.btn-primary-mob {
     display: block;

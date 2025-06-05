@@ -11,3 +11,9 @@
   padding-bottom: clamp(2.5rem, 2.679vw + 1.964rem, 4.375rem);
   overflow: hidden;
 }
+.title {
+  font-size: clamp(1.625rem, 1.064vw + 1.412rem, 2.25rem);
+  line-height: clamp(1.788rem, 1.17vw + 1.553rem, 2.475rem);
+  margin-bottom: 20px;
+  color: #194429;
+}

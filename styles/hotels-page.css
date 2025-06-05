@@ -1,0 +1,128 @@
+@import url(./base/variables.css);
+@import url(./base/reset.css);
+@import url(./base/common.css);
+
+@import url(./components/header.css);
+@import url(./components/footer.css);
+
+.hotel-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+
+  .hotel-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .hotel-basic-info {
+    margin-top: 20px;
+
+    .hotel-name {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .hotel-stars {
+      margin-top: 10px;
+      font-size: 22px;
+      color: #f5b50a;
+    }
+  }
+}
+
+.hotel-description-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 40px;
+
+  .hotel-description {
+    flex: 2;
+
+    .hotel-heading {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .hotel-description-text p {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #555;
+    }
+  }
+
+  .hotel-extras {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .extras-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #333;
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: "✔";
+          position: absolute;
+          left: 0;
+          color: #28a745;
+        }
+      }
+    }
+  }
+}
+
+.hotel-amenities-section {
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .checkin-checkout {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+  }
+
+  .amenities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+
+    li {
+      flex: 0 0 45%;
+      font-size: 16px;
+      color: #555;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #007bff;
+      }
+    }
+  }
+}
